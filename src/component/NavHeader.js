@@ -7,7 +7,7 @@ class NavHeader extends React.Component {
   }
 
   render () {
-    console.log(this.context.router.isActive('/blog'));
+    // console.log(this.context.router.isActive('/blog'));
     return(
       <div className='nav-header'>
         <button type="button" className='btn btn-default' aria-label="Left Align" onClick={this.bandleBack.bind(this)}>
