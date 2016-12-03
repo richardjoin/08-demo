@@ -9,7 +9,7 @@ class Item extends React.Component {
       data:''
     }
   }
-  ComponentDidMount(){
+  componentDidMount(){
     let address=this.props.params.title;
     axios.get(`https://raw.githubusercontent.com/richardjoin/08-demo/master/data/${address}.md`)
       .then(res => this.setState({data:res.data}))
@@ -19,8 +19,7 @@ class Item extends React.Component {
 
     return(
       <div>
-      <div dangerouslySetInnerHTML={{__html:content}} />
-        {content}
+        <div dangerouslySetInnerHTML={{__html:content}} />
       </div>
     )
   }
