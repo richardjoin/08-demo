@@ -1,5 +1,6 @@
 import React from 'react';
 
+import marked from 'marked';
 class Item extends React.Component {
   render () {
     // console.log(this.props.params.title);
@@ -10,6 +11,8 @@ class Item extends React.Component {
     return(
       <div>
         {content}
+        {marked('# 66666')}
+        <div dangerouslySetInnerHTML={{__html:marked('# fsdjfg')}} />
       </div>
     )
   }
