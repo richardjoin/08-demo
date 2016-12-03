@@ -57,7 +57,7 @@ class Work extends React.Component {
     }
   render () {
     let styles = {
-      width: '100%',
+      width: '90%',
       margin: '0 auto'
     }
     return(
