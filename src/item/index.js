@@ -1,7 +1,12 @@
 import React from 'react';
 
 import marked from 'marked';
+import axios from 'axios';
 class Item extends React.Component {
+  ComponentDidMount(){
+    let address=this.props.params.title;
+    axios.get(`https://raw.githubusercontent.com/richardjoin/08-demo/master/data/${address}.md`)
+  }
   render () {
     // console.log(this.props.params.title);
     let content = this.props.params.title==0 ? '这是第一个页面' :
@@ -11,8 +16,6 @@ class Item extends React.Component {
     return(
       <div>
         {content}
-        {marked('# 66666')}
-        <div dangerouslySetInnerHTML={{__html:marked('# fsdjfg')}} />
       </div>
     )
   }
