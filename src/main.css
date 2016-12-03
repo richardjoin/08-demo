@@ -141,16 +141,10 @@
 }
 .blog-content h3{
   padding: 10px;
-  /*text-align: center;*/
 }
 .blog-content p{
-  /*text-align: center;*/
-}
-.btnn{
-  display: block;
-  margin: 0 auto;
+
 }
 .item-warp{
   flex-grow: 1;
-  
 }
