@@ -2,9 +2,8 @@ import React from 'react';
 
 import marked from 'marked';
 import axios from 'axios';
-
+import hljs from 'highlight.js';
 import Loading from '../component/Loading';
-import post from '../post.css';
 
 
 class Item extends React.Component {
@@ -21,6 +20,11 @@ class Item extends React.Component {
       .catch( err=> alert(err))
   }
   render () {
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     return(
       <div className='item-warp'>
         {
