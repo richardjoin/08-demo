@@ -4,7 +4,7 @@ import marked from 'marked';
 import axios from 'axios';
 
 import Loading from '../component/Loading';
-import post from './post';
+import post from '../post.css';
 
 
 class Item extends React.Component {
