@@ -16,6 +16,7 @@ class Blog extends React.Component {
   componentDidMount(){
     axios.get('https://raw.githubusercontent.com/richardjoin/08-demo/master/data/blogcard.json?a='+Math.random())
     .then( res => this.setState({data:res.data,wait:false}) )
+    // 网页刷新不出来显示的
     .catch( err=> alert(err))
   }
   render () {
