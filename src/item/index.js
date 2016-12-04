@@ -29,7 +29,7 @@ class Item extends React.Component {
       <div className='item-warp'>
         {
           this.state.data.length == 0 ? <Loading /> :
-          <div className='post-warp' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
+          <div className='post-content' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
         }
 
       </div>
