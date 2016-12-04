@@ -4,6 +4,9 @@ import marked from 'marked';
 import axios from 'axios';
 
 import Loading from '../component/Loading';
+import post from './post';
+
+
 class Item extends React.Component {
   constructor(){
     super();
@@ -22,7 +25,7 @@ class Item extends React.Component {
       <div className='item-warp'>
         {
           this.state.data.length==0 ? <Loading /> :
-          <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
+          <div className='post-warp' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
         }
 
       </div>
