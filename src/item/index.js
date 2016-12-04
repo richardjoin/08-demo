@@ -24,7 +24,7 @@ class Item extends React.Component {
     return(
       <div className='item-warp'>
         {
-          this.state.data.length==0 ? <Loading /> :
+          this.state.data.length == 0 ? <Loading /> :
           <div className='post-warp' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
         }
 
