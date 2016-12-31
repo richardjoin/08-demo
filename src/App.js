@@ -38,8 +38,6 @@ class App extends React.Component {
   setTitle(){
     this.setState({
       title:this.props.router.isActive('/',true) ? 'Home' :
-            this.props.router.isActive('blog') ? 'Blog' :
-            this.props.router.isActive('work') ? 'Work' :
             this.props.router.isActive('about') ? 'About' : 'Blog'
     })
   }
